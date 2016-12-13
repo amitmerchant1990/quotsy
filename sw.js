@@ -1,6 +1,6 @@
 importScripts('js/cache-polyfill.js');
 
-var CACHE_VERSION = 'app-v20';
+var CACHE_VERSION = 'app-v21';
 var CACHE_FILES = [
     '/',
     'index.html',

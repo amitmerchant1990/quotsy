@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
+  $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(a) {
     var quote = "<div class='row'><blockquote><p>"+a[0].content+"</p><footer>"+a[0].title+"</footer></blockquote></div><div class='clearfix'></div><div class='row'><a class='btn btn-social btn-twitter' href='https://twitter.com/intent/tweet?text="+a[0].content+"'>Tweet</a></div>";
     $("#quotes").append(quote);
     localStorage.setItem('quote', quote);
@@ -18,7 +18,7 @@ PullToRefresh.init({
   mainElement: 'body',
   onRefresh: function(){
     $.ajax( {
-      url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+      url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
       success: function(data) {
         var post = data.shift(); // The data is an array of posts. Grab the first one.
         var quote = "<blockquote><p>"+post.content+"</p><footer>"+post.title+"</footer></blockquote>";

@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>Quotsy</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#9b59b6">
+    <meta name="description" content="An offline capable PWA which serves design quotes">
+    <meta name="keywords" content="quotes,offline,mobile,web" />
+    <meta name="author" content="Amit Merchant">
+    <meta name="application-name" content="Quotsy" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="alloy-editor/assets/alloy-editor-ocean-min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <!-- for Facebook -->
+    <meta property="og:title" content="Quotsy" />
+    <meta property="og:type" content="appliction" />
+    <meta property="og:image" content="img/icon-144.png" />
+    <meta property="og:url" content="https://www.amitmerchant.com/quotsy" />
+    <meta property="og:description" content="An offline capable PWA which serves design quotes" />
+    <!-- for Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Quotsy" />
+    <meta name="twitter:description" content="An offline capable PWA which serves design quotes" />
+    <meta name="twitter:image" content="img/icon-144.png" />
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
+    <nav class="navbar-default navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Quotsy</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#about" data-toggle="modal" data-target="#myModal">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" id="quotes">
+
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Quotsy</h4>
+          </div>
+          <div class="modal-body">
+            <p>An offline capable PWA which serves design quotes</p>
+            <a href="https://github.com/amitmerchant1990/quotsy" target="_blank">Go to the repository</a>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/pulltorefresh.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

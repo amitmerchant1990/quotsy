@@ -1,6 +1,6 @@
 importScripts('js/cache-polyfill.js');
 
-var CACHE_VERSION = 'app-v31';
+var CACHE_VERSION = 'app-v32';
 var CACHE_FILES = [
     '/',
     'index.html',
@@ -8,7 +8,7 @@ var CACHE_FILES = [
     'js/jquery.min.js',
     'js/bootstrap.min.js',
     'js/pulltorefresh.js',
-    'js/clipboard.min.js'
+    'js/clipboard.min.js',
     'css/bootstrap.min.css',
     'css/style.css',
     'favicon.ico',

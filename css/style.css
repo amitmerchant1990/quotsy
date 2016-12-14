@@ -18,8 +18,8 @@ textarea:hover,textarea {
   text-align: center;
 }
 .navbar-default {
-  background-color: #9b59b6;
-  border-color: #8e44ad;
+  background-color: #b65959;
+  border-color: #a94a4a;
 }
 .navbar-default .navbar-brand {
   color: #ecf0f1;
@@ -42,20 +42,20 @@ textarea:hover,textarea {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #ecdbff;
-  background-color: #8e44ad;
+  background-color: #b15151;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #ecdbff;
-  background-color: #8e44ad;
+  background-color: #b15151;
 }
 .navbar-default .navbar-toggle {
-  border-color: #8e44ad;
+  border-color: #b3a5a9;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #8e44ad;
+  background-color: #b15151;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #ecf0f1;
@@ -72,15 +72,78 @@ textarea:hover,textarea {
 }
 
 #quotes {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
+    vertical-align:middle;
+    text-align:center;
+    margin-top: 28%;
 }
 
 blockquote {
     font-size: 23px;
+}
+
+.swipe-down{
+  text-align: center;
+  font-style: italic;
+  font-size: 11px;
+}
+
+@keyframes spin {
+  to {
+  	transform: rotate(360deg);
+  }
+}
+
+.icon-btn {
+  border: none;
+  background-color: transparent;
+  outline: 0;
+}
+
+.icon-btn i {
+  color: #85ffcd;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.icon-btn i.spin-animation {
+  animation-name: spin;
+  -webkit-animation-name: spin;
+  -moz-animation-name: spin;
+  -ms-animation-name: spin;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -ms-animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#toast {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#toast.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 @media (max-width: 767px) {
